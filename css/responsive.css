@@ -1,0 +1,92 @@
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-sm);
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        justify-content: center;
+        gap: var(--space-xs);
+    }
+    
+    nav a {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+    }
+
+    .hero {
+        padding: var(--space-lg) var(--space-md);
+        min-height: 300px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .featured h2 {
+        font-size: 2rem;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+    }
+
+    .cart-table thread {
+        display: none;
+    }
+
+    .cart-table tbody tr {
+        display: block;
+        margin-bottom: var(--space-md);
+        background: var(--white);
+        padding: var(--space-md);
+        border-radius: var(--border-radius);
+    }
+
+    .cart-table td { 
+        display: block; 
+        text-align: left; 
+        padding: var(--space-xs) 0; 
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .book-card img {
+        height: 180px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1400px) {
+    .hero h2 {
+        font-size: 4rem;
+    }
+
+    .featured h2,
+    .categories h2 {
+        font-size: 3rem;
+    }
+}
