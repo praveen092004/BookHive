@@ -1,0 +1,27 @@
+.about-section {
+    margin: var(--space-lg);
+}
+
+.about-section h2 {
+    font-size: 2rem;
+}
+
+.about-section p {
+    margin: var(--space-sm);
+}
+
+.content1 h4{
+    font-size: 1.5rem;
+}
+
+.content2 h4{
+    font-size: 1.5rem;
+}
+
+.content3 h4{
+    font-size: 1.5rem;
+}
+
+footer  {
+    text-align: center;
+}
