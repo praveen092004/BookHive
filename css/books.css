@@ -181,3 +181,7 @@
 .category-list li:hover a {
     color: var(--white);
 }
+
+footer {
+    text-align: center;
+}

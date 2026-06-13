@@ -1,0 +1,84 @@
+.form-section {
+    margin: var(--space-lg);
+    text-align: center;
+}
+
+.form-section h2 {
+    font-size: 2rem;
+    padding: var(--space-sm);
+}
+
+.form-section p {
+    padding: var(--space-sm);
+}
+
+.signup-form {
+    border: 2px solid var(--primary);
+    padding: var(--space-md);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin: var(--space-md);
+}
+
+.form-group input {
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: var(--space-xs);
+    width: 300px;
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+.form-group select {
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: var(--space-xs);
+}
+
+.form-group select:focus {
+    outline: none;
+}
+
+.checkbox-grid {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.checkbox-grid input {
+    margin: 4px;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: var(--space-xs);
+    margin: var(--space-sm);
+}
+
+.form-section button {
+    background-color: #4B5694;
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--space-sm) var(--space-md);
+    transition: all 0.5s;
+}
+
+.form-section button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #111844;
+}
+
+footer {
+    text-align: center;
+}

@@ -1,0 +1,84 @@
+.cart-section {
+    margin: var(--space-lg);
+    padding: var(--space-sm);
+    text-align: center;
+}
+
+.cart-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+}
+
+.cart-table {
+    margin: var(--space-md);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.cart-table td {
+    padding: var(--space-md);      
+}
+
+.remove-btn:hover {
+    cursor: pointer;
+}
+
+.order-summary {
+    margin: var(--space-sm);
+}
+
+.order-summary h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.order-summary dl dt {
+    margin: var(--space-xs);
+}
+
+.btn-primary {
+    background-color: #FF6A1C;
+    margin: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--border-radius);
+    transition: all 0.3s;
+}
+
+.btn-primary a {
+    text-decoration: none;
+    color: var(--white);
+    padding: var(--space-sm) var(--space-md);
+}
+
+.btn-primary:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #FFAE6E;
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    margin: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--border-radius);
+    transition: all 0.3s;
+}
+
+.btn-secondary a {
+    text-decoration: none;
+    padding: var(--space-sm) var(--space-md);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #111844;
+}
+
+footer {
+    text-align: center;
+}
