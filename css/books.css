@@ -23,14 +23,17 @@
 .search-box {
     display: flex;
     gap: var(--space-sm);
-    max-width: 600px;
+    justify-content: center;
+    /* max-width: 600px; */
     margin: auto 0 var(--space-md);
 }
 
 .search-box input {
     flex: 1;
     gap: var(--space-sm);
-    border: 2px solid #ddd ;
+    max-width: 40%;
+    padding-left: 10px;
+    border: 2px solid #ddd;
     border-radius: var(--border-radius);
     font-size: 1rem;
 }
@@ -127,4 +130,54 @@
     border-radius: var(--border-radius); 
     cursor: pointer; 
     transition: background 0.3s; 
+}
+
+/* <!-- POPULAR CATEGORIES (using unordered list) --> */
+        /* <section class="categories-quick">
+            <h3>Popular Categories</h3>
+            <ul class="category-list">
+                <li><a href="#fiction">Fiction</a></li>
+                <li><a href="#nonfiction">Non-Fiction</a></li>
+                <li><a href="#biography">Biographies</a></li>
+                <li><a href="#business">Business</a></li>
+                <li><a href="#children">Children</a></li>
+                <li><a href="#comics">Comics</a></li>
+            </ul>
+        </section> */
+.categories-quick {
+    padding: var(--space-sm);
+    text-align: center;
+    background-color: #4A4466;
+    color: var(--white);
+    position: sticky;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: var(--space-md);
+}
+
+.category-list li {
+    list-style-type: none;
+    padding: var(--space-xs) var(--space-sm);
+    transition: background 0.5s;
+}
+
+.category-list li a{
+    text-decoration: none;
+    color: var(--primary);
+    color: var(--white);
+}
+
+.category-list li:hover {
+    background-color: #1591DC;
+    color: var(--white);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.category-list li:hover a {
+    color: var(--white);
 }
