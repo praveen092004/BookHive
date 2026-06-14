@@ -107,32 +107,6 @@ const books = [
 
 const booksContainer = document.getElementById('books-container')
 
-const CategorySelected = document.getElementById('category-filter')
-
-const searchInput = document.getElementById('search-input')
-
-const searchButton = document.getElementById('search-button')
-
-const sorted = document.getElementById('sort')
-
-CategorySelected.addEventListener('click', (event) => {
-    if (event.target.value != "all") {
-        console.log(event.target.value)
-        showbyCategory(event.target.value)
-    }
-    else {
-        console.log(event.target.value)
-        renderBook(books)
-    }
-})
-
-sorted.addEventListener('search', (event) => {
-    showSortedList()
-})
-
-searchButton.addEventListener('click', (event) => {
-    searchBooks(searchInput.value.trim())
-})
 
 // All Books
 function createBookCard(book) {
@@ -166,37 +140,3 @@ function renderBook(bookList) {
 }
 
 renderBook(books)
-
-// by Category
-function showbyCategory(Category) {
-    if (!booksContainer) return;
-
-    const filteredBooks = books.filter(book => book.category.toLowerCase() === Category.toLowerCase())
-
-    renderBook(filteredBooks)
-}
-
-function showSortedList(sortType) {
-    if (!booksContainer) return;
-
-    if (sortType === "low")
-        sortedBooks = books.sort((a, b) => a.price - b.price)
-    else if (sortType == "high")
-        sortedBooks = books.sort((a, b) => b.price - a.price)
-    else
-        sortedBooks = books.sort((a, b) => a.rating - b.rating)
-
-    renderBook(sortedBooks)
-}
-
-function searchBooks(searchitem) {
-    if (!booksContainer) return;
-
-    console.log(searchitem)
-
-    const matchingbooks = books.filter(book =>
-        book.title.toLowerCase().includes(searchitem.toLowerCase())
-    )
-
-    renderBook(matchingbooks)
-}
