@@ -34,7 +34,7 @@ online">
             <a href="books.html">Books</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <a href="cart.html">Cart</a>
+            <a href="cart.html" id="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a>
             <a href="login.html">Login</a>
         </nav>
     </header>
@@ -43,8 +43,8 @@ online">
 
         <!-- Hero Section -->
         <section class="hero">
-            <h2>Step Into BookHive</h2>
-            <p>India’s ultimate destination for book lovers. Discover, connect, and fall in love with stories that
+            <h2 id="hero-title">Step Into BookHive</h2>
+            <p id="hero-subtitle">India’s ultimate destination for book lovers. Discover, connect, and fall in love with stories that
                 inspire</p>
             <a href="books.html" class="btn"> Browse Books</a>
         </section>
@@ -54,12 +54,12 @@ online">
             <h2>Featured Books</h2>
 
             <div class="books_container">
-                <article class="book-card">
+                <!-- <article class="book-card">
                     <img src="images/books/wings-of-fire.png" alt="image not found">
                     <h3>Wings of Fire</h3>
                     <p class="author">by A.P.J Abdul Kalam</p>
                     <p class="price">₹299</p>
-                    <button>Add to Cart</button>
+                    <button id="cart-btn">Add to Cart</button>
                 </article>
 
                 <article class="book-card">
@@ -104,7 +104,7 @@ cover">
                     <button>Add to Cart</button>
                 </article>
             </div>
-        </section>
+        </section> -->
 
         <!-- Categories Section -->
         <section class="categories">
@@ -178,7 +178,8 @@ cover">
         <div class="footer-bottom">
             <p>&copy; 2026 BookHive. All rights reserved.</p>
         </div>
-
+        <script src="js/books.js"></script>
+        <script src="js/main.js"></script>
 </body>
 
 </html>

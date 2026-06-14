@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Books - BookHive</title>
+    <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/books.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -12,13 +13,13 @@
 
 <body>
     <header>
-        <h1>🛒 BookHive</h1>
+        <h1><img src="images/favicon.png" alt="icon not found" id="icon_img"> BookHive</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="books.html">Books</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <a href="cart.html">🛒 Cart</a>
+            <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
             <a href="login.html">Login</a>
         </nav>
     </header>
@@ -35,7 +36,7 @@
         <section class="filters">
             <div class="search-box">
                 <input type="search" id="search-input" placeholder="Search books, authors, or genres...">
-                <button type="button">Search</button>
+                <button type="button" id="search-button">Search</button>
             </div>
 
             <div class="filter-controls">
@@ -51,8 +52,8 @@
                 <label for="sort">Sort by:</label>
                 <select id="sort">
                     <option value="default">Default</option>
-                    <option value="price-low">Price: Low to High</option>
-                    <option value="price-high">Price: High to Low</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
                     <option value="rating">Rating</option>
                 </select>
             </div>
@@ -74,7 +75,7 @@
         <!-- BOOKS GRID -->
         <section class="books-grid" id="books-container">
 
-            <article class="book-card">
+            <!-- <article class="book-card">
                 <img src="images/books/wings-of-fire.png" alt="Wings of Fire" loading="lazy">
                 <h3>Wings of Fire</h3>
                 <p class="author">A.P.J. Abdul Kalam</p>
@@ -119,7 +120,7 @@
                 <p class="rating">⭐ 4.7 (9,324 reviews)</p>
                 <p class="price">₹499</p>
                 <button class="add-to-cart" data-id="3">Add to Cart</button>
-            </article>
+            </article> -->
 
         </section>
 
@@ -129,6 +130,8 @@
         <p>&copy; 2026 BookHive. All rights reserved.</p>
     </footer>
 
+    <script src="js/books.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
