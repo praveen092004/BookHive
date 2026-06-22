@@ -1,9 +1,22 @@
 const cartItemsContainer = document.getElementById("cart-items")
 const cartTotalElement = document.getElementById("cart-total")
+const cartTotalList = document.getElementById("order_list")
 
-const removebuttons = document.querySelector(".remove-btn")
+const checkoutbtn = document.querySelector(".btn-primary")
 
-console.log(removebuttons)
+checkoutbtn.addEventListener('click', () => {
+    if(cart.length === 0) 
+        alert("There is nothing in your cart")
+    else {
+        alert(`Congratulations! Your Ordered Confirmed. total items : ${cart.length} book${cart.length > 1 ? 's': ''}`)
+        cart=[]
+        saveCart()
+        renderCart()
+        updateCartCount()
+        updateOrderSummary()
+    }
+})
+
 
 function renderCart() {
     if (!cartItemsContainer) return;
@@ -50,7 +63,39 @@ function renderCart() {
     cartTotalElement.textContent = `₹${total}`
 
     attachQuantityListeners()
+    updateOrderSummary()
     attachRemoveListeners()
+}
+
+// function updateQuantity() {
+//     const quantity = document.querySelectorAll(".qty-input").addEventListener('change', (event) => {
+//         console.log(event.target.id)
+//         update_qtn = cart.find(event.target.id)
+//         saveCart();
+//         renderCart()
+//         updateOrderSummary()
+//         console.log('Clicked Quantity :',)
+//     })
+// }
+
+function updateOrderSummary() {
+    if (!cartItemsContainer) return;
+
+    const total = cart.reduce((t, item) => { return t + item.price * item.quantity }, 0);
+
+    cartTotalList.innerHTML = `
+    <dt>Subtotal:</dt>
+    <dd>₹${total}</dd>
+
+    <dt>Shipping:</dt>
+    <dd>FREE</dd>
+
+    <dt>Tax (5% GST):</dt>
+    <dd>₹${(total * 0.05).toFixed(2)}</dd>
+
+    <dt><strong>Grand Total:</strong></dt>
+    <dd><strong>₹${(total + (total * 0.05)).toFixed(2)}</strong></dd>
+    `
 }
 
 function attachQuantityListeners() {
@@ -72,14 +117,23 @@ function attachQuantityListeners() {
 }
 
 renderCart()
+updateOrderSummary();
 
-console.log("Cart page console")
+function attachRemoveListeners() {
+    const removebuttons = document.querySelectorAll(".remove-btn")
 
-removebuttons.forEach(removebtn => {
-    removebtn.addEventListener('click', function(event) {
-        const button = event.target.closest(".remove-btn")
-        const itemId = button.dataset.id;
+    removebuttons.forEach(removebtn => {
+        removebtn.addEventListener('click', function (event) {
+            const button = event.target.closest(".remove-btn")
+            const itemId = button.dataset.id;
 
-        console.log("The id is :", itemId);
+            console.log("The id is :", itemId);
+            cart = cart.filter(book => book.id != itemId)
+
+            saveCart()
+            renderCart()
+            updateCartCount()
+            updateOrderSummary()
+        })
     })
-})
+}
