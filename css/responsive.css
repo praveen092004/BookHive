@@ -14,7 +14,7 @@
         justify-content: center;
         gap: var(--space-xs);
     }
-    
+
     nav a {
         font-size: 0.9rem;
         padding: 4px 8px;
@@ -41,7 +41,7 @@
         flex-direction: column;
     }
 
-    .cart-table thread {
+    .cart-table thead {
         display: none;
     }
 
@@ -53,10 +53,10 @@
         border-radius: var(--border-radius);
     }
 
-    .cart-table td { 
-        display: block; 
-        text-align: left; 
-        padding: var(--space-xs) 0; 
+    .cart-table td {
+        display: block;
+        text-align: left;
+        padding: var(--space-xs) 0;
     }
 }
 

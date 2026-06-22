@@ -325,27 +325,45 @@ footer {
 
 /* Notification */
 
-.notification {
+/* .notification {
     position: fixed;
     top: 100px;
-    right: 20px;
+    left: 20px;
     background-color: var(--success);
     color: var(--white);
     padding: var(--space-sm) var(--space-md);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
     animation: slideIn 0.3s ease-out;
+} */
+
+.notification {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    width: calc(100% - 40px);
+    max-width: 400px;
+    background-color: #2E7D32;
+    background-color: var(--success);
+    color: var(--white);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    z-index: 9999;
+    box-sizing: border-box;
+    animation: slideIn 0.3s ease-in-out forwards;
 }
 
 /* Animations  */
 
 @keyframes slideIn {
     from {
-        transform: translateX(100%);
+        transform: translateY(-20%);
         opacity: 0;
     }
+
     to {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -355,6 +373,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -368,8 +387,15 @@ footer {
 }
 
 @keyframes pulse {
-    0%, 100% {transform: scale(1);}
-    50% {transform: scale(1.05);}
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 .sale-tag {
@@ -383,8 +409,13 @@ footer {
 }
 
 @keyframes spin {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .spinner {
