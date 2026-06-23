@@ -23,12 +23,13 @@
 
 .login-form .form-group {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-md);
     margin: var(--space-md);
 }
 
 .login-form .form-group input {
-    width: 400px;
+    width: 250px;
     padding: var(--space-xs);
     border: 2px solid #ddd;
     border-radius: var(--border-radius);
